@@ -1,0 +1,4 @@
+model,target,log_loss,accuracy,brier_score,average_precision
+Logistic Regression - runs,target_runs,1.307825807246387,0.47639484978540775,,
+Logistic Regression - boundary,target_boundary,,0.8090128755364807,0.14929843028211834,0.23978283095130842
+Logistic Regression - dismissal,target_dismissal,,0.9742489270386266,0.025002357393229886,0.16513378181460875
