@@ -16,8 +16,8 @@ from sklearn.metrics import (
     log_loss,
 )
 
-from Config import PROCESSED_DIR, REPORT_DIR
-DATA_DIRECTORY = PROCESSED_DIR / "ml"
+from Config import FEATURES_DIR, REPORT_DIR
+DATA_DIRECTORY = FEATURES_DIR
 TRAIN_FILE = DATA_DIRECTORY / "kohli_train_features.csv"
 VALIDATION_FILE = DATA_DIRECTORY / "kohli_validation_features.csv"
 

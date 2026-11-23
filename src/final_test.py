@@ -34,15 +34,14 @@ from sklearn.metrics import (
 )
 
 try:
-    from src.Config import PROCESSED_DIR, REPORT_DIR, MODELS_DIR
+    from src.Config import FEATURES_DIR, REPORT_DIR, MODELS_DIR
     from src.models.probability_utils import align_run_probabilities
 except ImportError:
-    from ..Config import PROCESSED_DIR, REPORT_DIR, MODELS_DIR
+    from ..Config import FEATURES_DIR, REPORT_DIR, MODELS_DIR
     from ..models.probability_utils import align_run_probabilities
 
 
-ML_DATA_DIR = PROCESSED_DIR / "ml"
-DATA_DIR = ML_DATA_DIR if (ML_DATA_DIR / "kohli_train_features.csv").is_file() else PROCESSED_DIR
+DATA_DIR = FEATURES_DIR
 
 TRAIN_FILE = DATA_DIR / "kohli_train_features.csv"
 VALIDATION_FILE = DATA_DIR / "kohli_validation_features.csv"
