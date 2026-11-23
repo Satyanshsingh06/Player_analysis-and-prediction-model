@@ -1,0 +1,7 @@
+model,target,log_loss,accuracy,brier_score,average_precision
+Run frequency baseline,target_runs,1.3182509723571114,0.4656652360515021,,
+Boundary frequency baseline,target_boundary,,0.8175965665236051,0.14976198191049184,0.18240343347639484
+Dismissal frequency baseline,target_dismissal,,0.9742489270386266,0.02513868612043735,0.02575107296137339
+Logistic Regression - runs,target_runs,1.307825807246387,0.47639484978540775,,
+Logistic Regression - boundary,target_boundary,,0.8090128755364807,0.14929843028211834,0.23978283095130842
+Logistic Regression - dismissal,target_dismissal,,0.9742489270386266,0.025002357393229886,0.16513378181460875
