@@ -32,7 +32,7 @@ from sklearn.metrics import (
     log_loss,
 )
 
-from src.Config import MODELS_DIR, PROCESSED_DIR, REPORT_DIR
+from src.Config import MODELS_DIR, FEATURES_DIR, REPORT_DIR
 from src.features.model_features import MODEL_FEATURES, TARGETS
 from src.models.model_selection import (
     get_model_configuration,
@@ -43,7 +43,7 @@ from src.models.probability_utils import align_run_probabilities
 from src.models.train_logistic import create_pipeline
 
 
-DATA_DIR = PROCESSED_DIR / "ml"
+DATA_DIR = FEATURES_DIR
 PREDICTION_DIR = REPORT_DIR / "selected_validation"
 CANDIDATE_DIR = MODELS_DIR / "candidates"
 

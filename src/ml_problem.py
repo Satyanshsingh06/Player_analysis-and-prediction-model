@@ -6,7 +6,7 @@ It does not train or evaluate a machine learning model.
 
 from pathlib import Path
 import pandas as pd
-from Config import MASTER_FILE, PROCESSED_DIR, REPORT_DIR
+from Config import MASTER_FILE, REPORT_DIR, TARGETS_DIR
 
 
 # Keep prediction targets centralized so later modules use the same names.
@@ -231,7 +231,7 @@ def save_prepared_datasets(
     splits: dict[str, pd.DataFrame],
 ) -> None: # Export reproducible datasets for future feature engineering.
 
-    output_directory = PROCESSED_DIR / "ml"
+    output_directory = TARGETS_DIR
 
     output_directory.mkdir(
         parents=True,

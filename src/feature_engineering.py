@@ -10,12 +10,12 @@ import numpy as np
 import pandas as pd
 
 try:
-    from .Config import MASTER_FILE, PROCESSED_DIR
+    from .Config import MASTER_FILE, FEATURES_DIR
 except ImportError:
-    from Config import MASTER_FILE, PROCESSED_DIR
+    from Config import MASTER_FILE, FEATURES_DIR
 
 
-OUTPUT_DIR = PROCESSED_DIR / "ml"
+OUTPUT_DIR = FEATURES_DIR
 
 TRAIN_END_YEAR = 2024
 VALIDATION_YEAR = 2025

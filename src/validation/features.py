@@ -5,9 +5,9 @@ basic point-in-time correctness before model training.
 """
 
 import pandas as pd
-from Config import PROCESSED_DIR
+from src.Config import FEATURES_DIR
 
-DATA_DIR = PROCESSED_DIR / "ml"
+DATA_DIR = FEATURES_DIR
 
 SPLIT_FILES = {
     "train": "kohli_train_features.csv",

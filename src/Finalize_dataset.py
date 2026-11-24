@@ -1,8 +1,8 @@
 from pathlib import Path
 import pandas as pd
-from Config import MASTER_FILE, PROCESSED_DIR
+from Config import MASTER_FILE
 
-OUTPUT_FILE = PROCESSED_DIR / "CricketIQ_master_v1.csv"
+OUTPUT_FILE = MASTER_FILE
 METADATA_PAIRS = {
     "season": "season_metadata",
     "match_date": "match_date_metadata",
@@ -31,7 +31,10 @@ def season_matches(season: pd.Series, metadata: pd.Series) -> pd.Series:
 
 
 def finalize_dataset():
-    df = pd.read_excel(MASTER_FILE)
+    if MASTER_FILE.suffix.lower() == ".csv":
+        df = pd.read_csv(MASTER_FILE)
+    else:
+        df = pd.read_excel(MASTER_FILE)
 
     print("\nOriginal shape:", df.shape)
 

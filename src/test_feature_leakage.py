@@ -8,10 +8,10 @@ recalculated values from the canonical delivery dataset.
 import numpy as np
 import pandas as pd
 
-from Config import MASTER_FILE, PROCESSED_DIR
+from Config import MASTER_FILE, FEATURES_DIR
 
 
-FEATURE_DIR = PROCESSED_DIR / "ml"
+FEATURE_DIR = FEATURES_DIR
 
 
 def load_audit_data() -> pd.DataFrame:
